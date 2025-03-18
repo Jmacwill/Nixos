@@ -5,7 +5,11 @@
   # manage.
   home.username = "jonathan";
   home.homeDirectory = "/home/jonathan";
+  
+  programs.kitty.enable = true;
+  wayland.windowManager.hyprland.enable = true;
 
+  programs.firefox.enable = true;
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
   # introduces backwards incompatible changes.
