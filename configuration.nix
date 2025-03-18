@@ -95,10 +95,12 @@
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   home-manager = {
-  extraSpecialArgs = { inherit inputs; };
-  users = {
+    extraSpecialArgs = { inherit inputs; };
+    useGlobalPkgs = true;
+    useUserPackages = true;
+    users = {
      jonathan = import ./home.nix;
-     };
+    };
   };
 
 }
