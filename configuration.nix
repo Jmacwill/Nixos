@@ -61,7 +61,17 @@
   environment.systemPackages = with pkgs; [
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
+    nvtopPackages.amd
   ];
+
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
+  };
+
+  services.xserver.videoDrivers = ["amdgpu"];
+
+
   programs.git.enable = true;
   services.openssh.enable = true;
 
