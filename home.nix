@@ -1,16 +1,42 @@
 { config, pkgs, ... }:
 
 {
+  imports = [
+     ./wm/hyprland.nix
+     ./wm/kitty.nix
+     ./wm/rofi.nix
+     #./wm/waybar.nix
+  ];
+  hyprland.enable = true;
+  kitty.enable = true;
+  rofi.enable = true;
+
+
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "jonathan";
   home.homeDirectory = "/home/jonathan";
   
-  programs.kitty.enable = true;
-  wayland.windowManager.hyprland.enable = true;
 
   programs.firefox.enable = true;
-  # This value determines the Home Manager release that your configuration is
+  # programs.waybar.enable = true;
+
+  gtk = {
+    iconTheme = {
+      name = "Papirus-Dark";
+      package = pkgs.papirus-icon-theme;
+    };
+    gtk3.extraConfig = {
+      gtk-applications-prefer-dark-theme = 1;
+    };
+    gtk4.extraConfig = {
+      gtk-applications-prefer-dark-theme = 1;
+    };
+  };
+
+
+
+# This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
   # introduces backwards incompatible changes.
   #
@@ -21,10 +47,8 @@
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
-  home.packages = [
-    # # Adds the 'hello' command to your environment. It prints a friendly
-    # # "Hello, world!" when run.
-    pkgs.hello
+  home.packages = with pkgs;[
+    hello
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
