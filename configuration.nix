@@ -10,11 +10,18 @@
       ./hardware-configuration.nix
       ./nixosModules/audio.nix
       ./nixosModules/bluetooth.nix
+      ./nixosModules/bootloader.nix
+      ./nixosModules/zsh.nix
+      ./nixosModules/amdgpu.nix
+      ./nixosModules/usbModule.nix
     ];
 
   #enable hardware stuff
   audio.enable = true;
+  bootloader.enable = true;
   bluetooth.enable = true;
+  zsh.enable = true;
+  amdgpu.enable = true;
 
 
   # Bootloader.
@@ -30,6 +37,9 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
+
+  # Enable time servers
+  services.ntp.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -53,9 +63,9 @@
   };
 
   # Configure keymap in X11
-  services.xserver = {
+  services.xserver.xkb = {
     layout = "us";
-    xkbVariant = "";
+    variant = "";
   };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
@@ -72,15 +82,7 @@
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
     nvtopPackages.amd
-  ];
-
-  hardware.graphics = {
-    enable = true;
-    enable32Bit = true;
-  };
-
-  services.xserver.videoDrivers = ["amdgpu"];
-
+  ]; 
 
   programs.git.enable = true;
   services.openssh.enable = true;

@@ -9,7 +9,7 @@
   config = lib.mkIf config.users.enable {
     users.users.cmacwill = {
       isNormalUser = true;
-      description = "cmacwill";
+      description = "jonathan";
       extraGroups = [
         "networkmanager"
         "wheel"

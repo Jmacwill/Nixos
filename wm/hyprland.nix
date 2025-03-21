@@ -13,11 +13,11 @@
     xwayland.enable = true;
     systemd.enable = true;
     settings = { 
-          #exec-once = [
-          #  "waybar"
-          #];
+          exec-once = [
+            "waybar"
+          ];
           layerrule = [
-          #  "blur, waybar"
+            "blur, waybar"
             "blur, rofi"
           ];
           monitor = [

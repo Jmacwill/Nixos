@@ -8,7 +8,7 @@
     ./generic-gpu.nix
     ./laptop.nix
     ./usbModule.nix
-    ./spacemouse.nix
+    #./spacemouse.nix
     
     #Localization
     ./locale.nix
@@ -19,14 +19,14 @@
     ./audio.nix
     ./bluetooth.nix
     ./bootloader.nix
-    ./homeManagerModule.nix
-    ./steam.nix
-    ./stylixModule.nix
+    #./homeManagerModule.nix
+    #./steam.nix
+    #./stylixModule.nix
     ./zsh.nix
 
     #testing:
     ./tailscale.nix
-    ./nasModule.nix
+    #./nasModule.nix
     ./ssh.nix
   ];
 

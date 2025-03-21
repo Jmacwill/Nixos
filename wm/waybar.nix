@@ -145,7 +145,7 @@ with lib;
         };
 
         "clock" = {
-          timezone = "America/Indiana/Indianapolis";
+          timezone = "America/Denver";
           interval = 1;
           format = " {:%I:%M:%S %p   %m/%d} ";
           tooltip-format = ''
