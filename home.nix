@@ -5,11 +5,15 @@
      ./wm/hyprland.nix
      ./wm/kitty.nix
      ./wm/rofi.nix
+     ./wm/stylixModule.nix
+     ./wm/styling.nix
      #./wm/waybar.nix
   ];
   hyprland.enable = true;
   kitty.enable = true;
   rofi.enable = true;
+  stylixModule.enable = true;
+  styling.enable = true;
 
 
   # Home Manager needs a bit of information about you and the paths it should
@@ -18,21 +22,10 @@
   home.homeDirectory = "/home/jonathan";
   
 
-  programs.firefox.enable = true;
+ programs.firefox.enable = true;
   # programs.waybar.enable = true;
 
-  gtk = {
-    iconTheme = {
-      name = "Papirus-Dark";
-      package = pkgs.papirus-icon-theme;
-    };
-    gtk3.extraConfig = {
-      gtk-applications-prefer-dark-theme = 1;
-    };
-    gtk4.extraConfig = {
-      gtk-applications-prefer-dark-theme = 1;
-    };
-  };
+ 
 
 
 
@@ -49,6 +42,7 @@
   # environment.
   home.packages = with pkgs;[
     hello
+    dconf
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
