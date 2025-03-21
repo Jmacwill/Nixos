@@ -7,7 +7,7 @@
   };
 
   config = lib.mkIf config.users.enable {
-    users.users.cmacwill = {
+    users.users.jonathan = {
       isNormalUser = true;
       description = "jonathan";
       extraGroups = [

@@ -13,7 +13,7 @@
       ./nixosModules/bootloader.nix
       ./nixosModules/zsh.nix
       ./nixosModules/amdgpu.nix
-      ./nixosModules/usbModule.nix
+      ./nixosModules/usbModule.nix 
     ];
 
   #enable hardware stuff
@@ -74,6 +74,7 @@
     description = "Jonathan";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [];
+    shell = pkgs.zsh;
   };
 
   # List packages installed in system profile. To search, run:
