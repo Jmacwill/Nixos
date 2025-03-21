@@ -8,6 +8,7 @@
      ./wm/stylixModule.nix
      ./wm/styling.nix
      ./wm/waybar.nix
+     ./wm/direnv.nix
 
   ];
 
@@ -47,6 +48,8 @@
   home.packages = with pkgs;[
     hello
     dconf
+    prismlauncher
+    
   
 
     # # It is sometimes useful to fine-tune packages, for example, by applying

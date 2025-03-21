@@ -14,6 +14,7 @@
       ./nixosModules/zsh.nix
       ./nixosModules/amdgpu.nix
       ./nixosModules/usbModule.nix 
+      ./nixosModules/tailscale.nix
     ];
 
   #enable hardware stuff
