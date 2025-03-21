@@ -7,14 +7,17 @@
      ./wm/rofi.nix
      ./wm/stylixModule.nix
      ./wm/styling.nix
-     #./wm/waybar.nix
+     ./wm/waybar.nix
+
   ];
+
+
   hyprland.enable = true;
   kitty.enable = true;
   rofi.enable = true;
   stylixModule.enable = true;
   styling.enable = true;
-
+  waybar.enable = false;
 
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
@@ -22,8 +25,9 @@
   home.homeDirectory = "/home/jonathan";
   
 
- programs.firefox.enable = true;
-  # programs.waybar.enable = true;
+  programs.firefox.enable = true;
+  programs.vscode.enable = true;  
+# programs.waybar.enable = true;
 
  
 
@@ -43,6 +47,7 @@
   home.packages = with pkgs;[
     hello
     dconf
+  
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the

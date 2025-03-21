@@ -8,7 +8,14 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ./nixosModules/audio.nix
+      ./nixosModules/bluetooth.nix
     ];
+
+  #enable hardware stuff
+  audio.enable = true;
+  bluetooth.enable = true;
+
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -23,6 +30,9 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
+
+  # Allow unfree packages
+  nixpkgs.config.allowUnfree = true;
 
   # Set your time zone.
   time.timeZone = "America/Denver";
