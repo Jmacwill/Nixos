@@ -1,4 +1,6 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
+
+#removed binding config
 
 {
   imports = [
@@ -29,6 +31,7 @@
   programs.firefox.enable = true;
   programs.vscode.enable = true;  
 
+
   
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
@@ -47,6 +50,8 @@
     prismlauncher
     xfce.thunar
     gvfs
+    tor-browser
+    brave
     #rnix-lsp
 
   

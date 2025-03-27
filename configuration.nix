@@ -2,7 +2,9 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, inputs, ... }:
+{ pkgs, inputs, ... }:
+
+#removed config
 
 {
   imports =
@@ -32,14 +34,7 @@
   bluetooth.enable = true;
   zsh.enable = true;
   amdgpu.enable = true;
-  #hyprland.enable = true;
-  #kitty.enable = true;
-  #rofi.enable = true;
-  #stylixModule.enable = true;
-  #styling.enable = true;
-  #waybar.enable = true;
   
- 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -89,7 +84,7 @@
     isNormalUser = true;
     description = "Jonathan";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [];
+    #packages = with pkgs; [];
     shell = pkgs.zsh;
   };
   
