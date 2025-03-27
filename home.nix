@@ -8,7 +8,7 @@
      ./wm/stylixModule.nix
      ./wm/styling.nix
      ./wm/waybar.nix
-     ./wm/direnv.nix
+     #./wm/direnv.nix
 
   ];
 
@@ -29,11 +29,7 @@
   programs.firefox.enable = true;
   programs.vscode.enable = true;  
 
-
- 
-
-
-
+  
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
   # introduces backwards incompatible changes.
@@ -49,7 +45,10 @@
     hello
     dconf
     prismlauncher
-    
+    xfce.thunar
+    gvfs
+    #rnix-lsp
+
   
 
     # # It is sometimes useful to fine-tune packages, for example, by applying

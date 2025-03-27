@@ -3,6 +3,9 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    # NixOS configuration - this is an attempt to setup the path for the Nixos LSP Module.  It no worky for some reason
+  
+    # nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
      
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -13,8 +16,16 @@
       url = "github:danth/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
       };
+      
+  #  pkgs.mkShell {
+  #     buildInputs = with pkgs; [
+  #        rnix-lsp
+  #];
+#}
 
     };
+
+  
   
   outputs = { self, nixpkgs, ... }@inputs: { 
     # use "nixos", or your hostname as the name of the configuration

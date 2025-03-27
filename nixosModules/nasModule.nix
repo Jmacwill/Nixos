@@ -11,8 +11,8 @@
     mountConfig = {
       options = "noatime";
     };
-    what = "100.101.227.116:/mnt/Main_Core/Core_1/Charles/cmacwill";
-    where = "/home/cmacwill/externalNetworkDrives/jmacwillNAS";
+    what = "100.101.227.116:/mnt/Main_Core/Core_1/";
+    where = "/home/jonathan/externalNetworkDrives/NAS";
   }];
 
   systemd.automounts = [{
@@ -20,6 +20,6 @@
     automountConfig = {
       TimeoutIdleSec = "600";
     };
-    where = "/home/cmacwill/externalNetworkDrives/jmacwillNAS";
+    where = "/home/jonathan/externalNetworkDrives/NAS";
   }];
 }

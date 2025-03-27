@@ -15,7 +15,16 @@
       ./nixosModules/amdgpu.nix
       ./nixosModules/usbModule.nix 
       ./nixosModules/tailscale.nix
-    ];
+    #  ./nixosModules/lspModule.nix
+      ./nixosModules/nasModule.nix
+      ./wm/direnv.nix
+      #./wm/hyprland.nix
+      #./wm/kitty.nix
+      #./wm/rofi.nix
+      #./wm/stylixModule.nix
+      #./wm/styling.nix
+      #./wm/waybar.nix   
+   ];
 
   #enable hardware stuff
   audio.enable = true;
@@ -23,8 +32,14 @@
   bluetooth.enable = true;
   zsh.enable = true;
   amdgpu.enable = true;
-
-
+  #hyprland.enable = true;
+  #kitty.enable = true;
+  #rofi.enable = true;
+  #stylixModule.enable = true;
+  #styling.enable = true;
+  #waybar.enable = true;
+  
+ 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -77,6 +92,8 @@
     packages = with pkgs; [];
     shell = pkgs.zsh;
   };
+  
+  
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
@@ -117,6 +134,12 @@
   system.stateVersion = "24.05"; # Did you read the comment?
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+ 
+  #pkgs.mkShell = {
+  #  buildInputs = with pkgs; [
+  #    rnix-lsp
+  #  ];
+  #};
 
   home-manager = {
     extraSpecialArgs = { inherit inputs; };
