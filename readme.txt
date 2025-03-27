@@ -1,3 +1,9 @@
+jonathans nix profile
+
+
+
+use this to install lsp for nix
+
 This repo is also packaged via Nix flakes. The language server package is available in the default flake output
  github:oxalica/nil#, under bin/nil.
 
