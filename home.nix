@@ -7,7 +7,7 @@
      ./wm/hyprland.nix
      ./wm/kitty.nix
      ./wm/rofi.nix
-     ./wm/stylixModule.nix
+     #./wm/stylixModule.nix
      ./wm/styling.nix
      ./wm/waybar.nix
      #./wm/direnv.nix
@@ -18,7 +18,7 @@
   hyprland.enable = true;
   kitty.enable = true;
   rofi.enable = true;
-  stylixModule.enable = true;
+  #stylixModule.enable = true;
   styling.enable = true;
   waybar.enable = true;
 

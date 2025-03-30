@@ -12,8 +12,7 @@
     
     #Localization
     ./locale.nix
-    ./networkingModule.nix
-    #./users.nix
+    ./users.nix
     
     #Software
     ./audio.nix
@@ -21,12 +20,13 @@
     ./bootloader.nix
     #./homeManagerModule.nix
     #./steam.nix
-    #./stylixModule.nix
+    ./stylixModule.nix
     ./zsh.nix
 
-    #testing:
+    #Netwoking:
     ./tailscale.nix
     ./nasModule.nix
+    ./networkingModule.nix
     #./ssh.nix
   ];
 
@@ -39,19 +39,19 @@
     wget
     git
     tree
-    #dmidecode
-    #mesa-demos
-    #gpu-viewer
-    #curl
-    #fastfetch
-    #htop
-    #wayland-utils
-    #brightnessctl
-    #qmk
-    #hyprshot
-    #vesktop
-    #mupdf
-    #lm_sensors
+    dmidecode
+    mesa-demos
+    gpu-viewer
+    curl
+    fastfetch
+    htop
+    wayland-utils
+    brightnessctl
+    qmk  # keyboard firmware
+    hyprshot
+    vesktop
+    mupdf
+    lm_sensors
   ];
 
   #programs.neovim = {

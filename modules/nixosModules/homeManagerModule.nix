@@ -16,7 +16,7 @@
       useGlobalPkgs = true;
       
       users = {
-	"cmacwill" = import ../../userHomeEnvironments/${config.homeManagerModule.variation}.nix;
+	"jonathan" = import ../../userHomeEnvironments/${config.homeManagerModule.variation}.nix;
       };
 
       sharedModules = [
