@@ -10,16 +10,16 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ../../nixosModules
-      #./nixosModules/audio.nix
-      #./nixosModules/bluetooth.nix
-      #./nixosModules/bootloader.nix
-      #./nixosModules/zsh.nix
-      #./nixosModules/amdgpu.nix
-      #./nixosModules/usbModule.nix 
-      #./nixosModules/tailscale.nix
-    #  ./nixosModules/lspModule.nix
-      #./nixosModules/nasModule.nix
+      #../../nixosModules
+      ../../nixosModules/audio.nix
+      ../../nixosModules/bluetooth.nix
+      ../../nixosModules/bootloader.nix
+      ../../nixosModules/zsh.nix
+      ../../nixosModules/amdgpu.nix
+      ../../nixosModules/usbModule.nix 
+      ../../nixosModules/tailscale.nix
+      #./nixosModules/lspModule.nix
+      ../../nixosModules/nasModule.nix
       ../../wm/direnv.nix
       #./wm/hyprland.nix
       #./wm/kitty.nix
@@ -37,8 +37,8 @@
   amdgpu.enable = true;
   
   # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  #boot.loader.systemd-boot.enable = true;
+  #boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "nixtop"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.

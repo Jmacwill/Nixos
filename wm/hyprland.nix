@@ -92,6 +92,7 @@
 
             "$mainMod, Q, exec, kitty"
             "$mainMod, C, killactive"
+            "$mainMod, B, exec, brave"
             "$mainMod, M, exit"
             "$mainMod, V, togglefloating"
             "$mainMod, P, pseudo"
