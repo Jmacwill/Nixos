@@ -11,15 +11,15 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       #../../nixosModules
-      ../../nixosModules/audio.nix
-      ../../nixosModules/bluetooth.nix
-      ../../nixosModules/bootloader.nix
-      ../../nixosModules/zsh.nix
-      ../../nixosModules/amdgpu.nix
-      ../../nixosModules/usbModule.nix 
-      ../../nixosModules/tailscale.nix
+      ../../modules/nixosModules/audio.nix
+      ../../modules/nixosModules/bluetooth.nix
+      ../../modules/nixosModules/bootloader.nix
+      ../../modules/nixosModules/zsh.nix
+      ../../modules/nixosModules/amdgpu.nix
+      ../../modules/nixosModules/usbModule.nix 
+      ../../modules/nixosModules/tailscale.nix
       #./nixosModules/lspModule.nix
-      ../../nixosModules/nasModule.nix
+      ../../modules/nixosModules/nasModule.nix
       ../../wm/direnv.nix
       #./wm/hyprland.nix
       #./wm/kitty.nix
