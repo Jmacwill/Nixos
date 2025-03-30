@@ -11,8 +11,8 @@
     #./spacemouse.nix
     
     #Localization
-    #./locale.nix
-    #./networkingModule.nix
+    ./locale.nix
+    ./networkingModule.nix
     #./users.nix
     
     #Software

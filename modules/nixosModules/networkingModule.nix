@@ -13,8 +13,9 @@
     # networking.proxy.default = "http://user:password@proxy:port/";
     # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
-    # Enable networking
+    # Enable networking and time services
     networking.networkmanager.enable = true;
+    services.ntp.enable = true;
     environment.systemPackages = with pkgs; [
       speedtest-cli
     ];

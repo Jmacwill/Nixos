@@ -11,22 +11,8 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ../../modules/nixosModules
-      #../../modules/nixosModules/audio.nix
-      #../../modules/nixosModules/bluetooth.nix
-      #../../modules/nixosModules/bootloader.nix
-      #../../modules/nixosModules/zsh.nix
-      #../../modules/nixosModules/amdgpu.nix
-      #../../modules/nixosModules/usbModule.nix 
-      #../../modules/nixosModules/tailscale.nix
-      #./nixosModules/lspModule.nix
-      #../../modules/nixosModules/nasModule.nix
       ../../wm/direnv.nix
-      #./wm/hyprland.nix
-      #./wm/kitty.nix
-      #./wm/rofi.nix
-      #./wm/stylixModule.nix
-      #./wm/styling.nix
-      #./wm/waybar.nix   
+       
    ];
 
   #enable hardware stuff
@@ -35,10 +21,8 @@
   bluetooth.enable = true;
   zsh.enable = true;
   amdgpu.enable = true;
-  
-  # Bootloader.
-  #boot.loader.systemd-boot.enable = true;
-  #boot.loader.efi.canTouchEfiVariables = true;
+  networkingModule.enable = true;
+  locale.enable = true;
 
   networking.hostName = "nixtop"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -48,31 +32,31 @@
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   # Enable networking
-  networking.networkmanager.enable = true;
+  # networking.networkmanager.enable = true;
 
   # Enable time servers
-  services.ntp.enable = true;
+  #services.ntp.enable = true;
 
   # Allow unfree packages
   #nixpkgs.config.allowUnfree = true;
 
   # Set your time zone.
-  time.timeZone = "America/Denver";
+  #time.timeZone = "America/Denver";
 
   # Select internationalisation properties.
-  i18n.defaultLocale = "en_US.UTF-8";
+  #i18n.defaultLocale = "en_US.UTF-8";
 
-  i18n.extraLocaleSettings = {
-    LC_ADDRESS = "en_US.UTF-8";
-    LC_IDENTIFICATION = "en_US.UTF-8";
-    LC_MEASUREMENT = "en_US.UTF-8";
-    LC_MONETARY = "en_US.UTF-8";
-    LC_NAME = "en_US.UTF-8";
-    LC_NUMERIC = "en_US.UTF-8";
-    LC_PAPER = "en_US.UTF-8";
-    LC_TELEPHONE = "en_US.UTF-8";
-    LC_TIME = "en_US.UTF-8";
-  };
+  #i18n.extraLocaleSettings = {
+   # LC_ADDRESS = "en_US.UTF-8";
+    #LC_IDENTIFICATION = "en_US.UTF-8";
+    #LC_MEASUREMENT = "en_US.UTF-8";
+    #LC_MONETARY = "en_US.UTF-8";
+    #LC_NAME = "en_US.UTF-8";
+    #LC_NUMERIC = "en_US.UTF-8";
+    #LC_PAPER = "en_US.UTF-8";
+    #LC_TELEPHONE = "en_US.UTF-8";
+    #LC_TIME = "en_US.UTF-8";
+  #};
 
   # Configure keymap in X11
   #services.xserver.xkb = {
