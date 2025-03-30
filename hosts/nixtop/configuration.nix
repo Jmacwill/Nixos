@@ -10,16 +10,16 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      #../../nixosModules
-      ../../modules/nixosModules/audio.nix
-      ../../modules/nixosModules/bluetooth.nix
-      ../../modules/nixosModules/bootloader.nix
-      ../../modules/nixosModules/zsh.nix
-      ../../modules/nixosModules/amdgpu.nix
-      ../../modules/nixosModules/usbModule.nix 
-      ../../modules/nixosModules/tailscale.nix
+      ../../modules/nixosModules
+      #../../modules/nixosModules/audio.nix
+      #../../modules/nixosModules/bluetooth.nix
+      #../../modules/nixosModules/bootloader.nix
+      #../../modules/nixosModules/zsh.nix
+      #../../modules/nixosModules/amdgpu.nix
+      #../../modules/nixosModules/usbModule.nix 
+      #../../modules/nixosModules/tailscale.nix
       #./nixosModules/lspModule.nix
-      ../../modules/nixosModules/nasModule.nix
+      #../../modules/nixosModules/nasModule.nix
       ../../wm/direnv.nix
       #./wm/hyprland.nix
       #./wm/kitty.nix
@@ -54,7 +54,7 @@
   services.ntp.enable = true;
 
   # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
+  #nixpkgs.config.allowUnfree = true;
 
   # Set your time zone.
   time.timeZone = "America/Denver";
@@ -75,10 +75,10 @@
   };
 
   # Configure keymap in X11
-  services.xserver.xkb = {
-    layout = "us";
-    variant = "";
-  };
+  #services.xserver.xkb = {
+  #  layout = "us";
+  #  variant = "";
+  #};
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.jonathan = {
@@ -94,9 +94,9 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-    wget
-    nvtopPackages.amd
+  #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+  #  wget
+  #  nvtopPackages.amd
   ]; 
 
   programs.git.enable = true;
@@ -129,7 +129,7 @@
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.05"; # Did you read the comment?
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  #nix.settings.experimental-features = [ "nix-command" "flakes" ];
  
   #pkgs.mkShell = {
   #  buildInputs = with pkgs; [

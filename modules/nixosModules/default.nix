@@ -39,25 +39,25 @@
     wget
     git
     tree
-    dmidecode
-    mesa-demos
-    gpu-viewer
-    curl
-    fastfetch
-    htop
-    wayland-utils
-    brightnessctl
-    qmk
-    hyprshot
-    vesktop
-    mupdf
-    lm_sensors
+    #dmidecode
+    #mesa-demos
+    #gpu-viewer
+    #curl
+    #fastfetch
+    #htop
+    #wayland-utils
+    #brightnessctl
+    #qmk
+    #hyprshot
+    #vesktop
+    #mupdf
+    #lm_sensors
   ];
 
-  programs.neovim = {
-    enable = true;
-    defaultEditor = true;
-  };
+  #programs.neovim = {
+  #  enable = true;
+  #  defaultEditor = true;
+  #};
 
   # experimental settings enable.
   nix.settings.experimental-features = [
