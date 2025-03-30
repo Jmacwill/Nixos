@@ -6,7 +6,7 @@
     #Hardware
     ./amdgpu.nix
     #./generic-gpu.nix
-    #./laptop.nix
+    ./laptop.nix
     ./usbModule.nix
     #./spacemouse.nix
     
@@ -26,7 +26,7 @@
 
     #testing:
     ./tailscale.nix
-    #./nasModule.nix
+    ./nasModule.nix
     #./ssh.nix
   ];
 
