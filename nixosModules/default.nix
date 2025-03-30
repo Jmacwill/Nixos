@@ -5,15 +5,15 @@
   imports = [
     #Hardware
     ./amdgpu.nix
-    ./generic-gpu.nix
-    ./laptop.nix
+    #./generic-gpu.nix
+    #./laptop.nix
     ./usbModule.nix
     #./spacemouse.nix
     
     #Localization
-    ./locale.nix
-    ./networkingModule.nix
-    ./users.nix
+    #./locale.nix
+    #./networkingModule.nix
+    #./users.nix
     
     #Software
     ./audio.nix
@@ -27,7 +27,7 @@
     #testing:
     ./tailscale.nix
     #./nasModule.nix
-    ./ssh.nix
+    #./ssh.nix
   ];
 
 
