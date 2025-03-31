@@ -5,7 +5,7 @@
     #Applications
     ./cad.nix
     #./firefox.nix
-    #./office.nix
+    ./office.nix
     #./research.nix
 
     #Desktop

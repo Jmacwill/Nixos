@@ -13,7 +13,7 @@
   
   cad.enable = true;
   #firefox.enable = true;
-  #office.enable = true;
+  office.enable = true;
   #research.enable = true;
 
   rofi.enable = true;
