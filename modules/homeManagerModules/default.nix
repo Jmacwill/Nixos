@@ -14,7 +14,7 @@
     ./rofi.nix
     ./styling.nix
     ./waybar.nix
-    #./wlogout/wlogout.nix
+    ./wlogout/wlogout.nix
 
     #Programs
     ./git.nix
@@ -22,9 +22,9 @@
     ./kitty.nix
     #./nixvim.nix
     #./yazi.nix
-    #./screenshotter.nix
+    ./screenshotter.nix
     #./scripts.nix
-    #./minecrafClient.nix
+    ./minecrafClient.nix
   ];
   
   home.sessionVariables.EDITOR = "nvim";

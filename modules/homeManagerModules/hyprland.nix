@@ -1,10 +1,10 @@
-{lib, config, ... }:
+{lib, config, pkgs, ... }:
 
 {
 # added to clone charles
   imports = [
-   # ./hyprlock.nix
-   # ./hypridle.nix
+    ./hyprlock.nix
+    ./hypridle.nix
   ];
 # adds done
 
@@ -16,8 +16,8 @@
   config = lib.mkIf config.hyprland.enable {
 
   #more adds
-  #hyprlock.enable = true;
-  #hypridle.enable = true;
+  hyprlock.enable = true;
+  hypridle.enable = true;
   #done
 
   wayland.windowManager.hyprland = {
@@ -107,6 +107,7 @@
             "$mainMod, B, exec, brave"
             "$mainMod, M, exit"
             "$mainMod, V, togglefloating"
+            "$mainMod, L, exec, ${pkgs.hyprlock}/bin/hyprlock"
             "$mainMod, P, pseudo"
             "$mainMod, J, togglesplit"
             "$mainMod, F, fullscreen"
