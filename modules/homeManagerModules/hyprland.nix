@@ -1,12 +1,24 @@
 {lib, config, ... }:
 
 {
+# added to clone charles
+  imports = [
+   # ./hyprlock.nix
+   # ./hypridle.nix
+  ];
+# adds done
+
   options = {
     hyprland.enable = 
       lib.mkEnableOption "enables hyprland config";
   };
 
   config = lib.mkIf config.hyprland.enable {
+
+  #more adds
+  #hyprlock.enable = true;
+  #hypridle.enable = true;
+  #done
 
   wayland.windowManager.hyprland = {
     enable = true;

@@ -1,8 +1,9 @@
 {  ... }:
 
 {
-  # Home Manager needs a bit of information about you and the paths it should
-  # manage.
+  # This is the primary interface for a laptop or other single screen
+  # device. It is a bit more minimalistic than the desktop version.
+
   home.username = "jonathan";
   home.homeDirectory = "/home/jonathan";
  
@@ -10,7 +11,7 @@
     ../modules/homeManagerModules
   ];
   
-  #cad.enable = true;
+  cad.enable = true;
   #firefox.enable = true;
   #office.enable = true;
   #research.enable = true;
@@ -23,7 +24,7 @@
   #wlogout.enable = true;
   #minecraftClient.enable = true;
 
-  #git.enable = true;
+  git.enable = true;
   kitty.enable = true;
   #nixvim.enable = true;
   #screenshotter.enable = true;

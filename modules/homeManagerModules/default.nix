@@ -3,7 +3,7 @@
 {
   imports = [
     #Applications
-    #./cad.nix
+    ./cad.nix
     #./firefox.nix
     #./office.nix
     #./research.nix
@@ -17,7 +17,7 @@
     #./wlogout/wlogout.nix
 
     #Programs
-    #./git.nix
+    ./git.nix
     ./direnv.nix
     ./kitty.nix
     #./nixvim.nix

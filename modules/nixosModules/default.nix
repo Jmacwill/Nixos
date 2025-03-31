@@ -5,10 +5,10 @@
   imports = [
     #Hardware
     ./amdgpu.nix
-    #./generic-gpu.nix
+    ./generic-gpu.nix
     ./laptop.nix
     ./usbModule.nix
-    #./spacemouse.nix
+    ./spacemouse.nix
     
     #Localization
     ./locale.nix
@@ -27,7 +27,7 @@
     ./tailscale.nix
     ./nasModule.nix
     ./networkingModule.nix
-    #./ssh.nix
+    ./ssh.nix
   ];
 
 
@@ -52,6 +52,8 @@
     vesktop
     mupdf
     lm_sensors
+    vscode
+    brave
   ];
 
   programs.neovim = {

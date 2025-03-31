@@ -24,6 +24,8 @@
   laptop.enable = true;
   stylixModule.enable = true;
   users.enable = true;
+  generic-gpu.enable = false;
+  spacemouse.enable = false;
 
   homeManagerModule = {
     enable = true;
@@ -32,23 +34,8 @@
 
   networking.hostName = "nixtop"; # Define your hostname.
  
-  environment.systemPackages = with pkgs; [
-  #  wget
-  #  nvtopPackages.amd
-  ]; 
-
-  programs.git.enable = true;
   services.openssh.enable = true;
 
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.05"; # Did you read the comment?
-
-  #nix.settings.experimental-features = [ "nix-command" "flakes" ];
- 
-  #pkgs.mkShell = {
-  #  buildInputs = with pkgs; [
-  #    rnix-lsp
-  #  ];
-  #};
-
 }
