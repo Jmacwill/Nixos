@@ -18,7 +18,7 @@
     ./audio.nix
     ./bluetooth.nix
     ./bootloader.nix
-    #./homeManagerModule.nix
+    ./homeManagerModule.nix
     #./steam.nix
     ./stylixModule.nix
     ./zsh.nix
@@ -54,10 +54,10 @@
     lm_sensors
   ];
 
-  #programs.neovim = {
-  #  enable = true;
-  #  defaultEditor = true;
-  #};
+  programs.neovim = {
+    enable = true;
+    defaultEditor = true;
+  };
 
   # experimental settings enable.
   nix.settings.experimental-features = [

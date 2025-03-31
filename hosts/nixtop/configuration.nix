@@ -4,16 +4,14 @@
 
 { pkgs, inputs, ... }:
 
-#removed config
-
 {
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ../../modules/nixosModules
-      ../../wm/direnv.nix
-       
+      inputs.home-manager.nixosModules.default    
    ];
+
 
   #enable hardware stuff
   audio.enable = true;
@@ -26,6 +24,11 @@
   laptop.enable = true;
   stylixModule.enable = true;
   users.enable = true;
+
+  homeManagerModule = {
+    enable = true;
+    variation = "medial";
+  };
 
   networking.hostName = "nixtop"; # Define your hostname.
  
@@ -47,14 +50,5 @@
   #    rnix-lsp
   #  ];
   #};
-
-  home-manager = {
-    extraSpecialArgs = { inherit inputs; };
-    useGlobalPkgs = true;
-    useUserPackages = true;
-    users = {
-     jonathan = import ../../home.nix;
-    };
-  };
 
 }

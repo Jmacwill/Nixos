@@ -21,7 +21,7 @@
 
       sharedModules = [
 	inputs.nixvim.homeManagerModules.nixvim
-	inputs.textfox.homeManagerModules.default
+	#inputs.textfox.homeManagerModules.default
       ];
     };
   };
