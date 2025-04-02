@@ -9,6 +9,7 @@
     ./laptop.nix
     ./usbModule.nix
     ./spacemouse.nix
+    ./printers.nix
     
     #Localization
     ./locale.nix
