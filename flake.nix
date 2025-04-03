@@ -18,17 +18,9 @@
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };  
-  #  pkgs.mkShell {
-  #     buildInputs = with pkgs; [
-  #        rnix-lsp
-  #];
-#}
+  };
 
-    };
-
-  
-  
-  outputs = { self, nixpkgs, ... }@inputs: { 
+   outputs = { self, nixpkgs, ... }@inputs: { 
     # use "nixos", or your hostname as the name of the configuration
     # it's a better practice than "default" shown in the video
     nixosConfigurations = {

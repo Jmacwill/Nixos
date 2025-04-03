@@ -55,6 +55,7 @@
     lm_sensors
     vscode
     brave
+    nemo-with-extensions # file manager with extensions
   ];
 
   programs.neovim = {

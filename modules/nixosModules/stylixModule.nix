@@ -9,8 +9,9 @@
   config = lib.mkIf config.stylixModule.enable {
     stylix = {
       enable = true;
-      base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-material-dark-soft.yaml";
-      image = ../../wallpapers/gruvbox1.jpg;
+      #base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-material-dark-soft.yaml";
+      base16Scheme = "${pkgs.base16-schemes}/share/themes/darkviolet.yaml";
+      image = ../../wallpapers/boat.jpg;
       fonts = {
 	monospace = {
 	  package = pkgs.nerd-fonts.jetbrains-mono;
