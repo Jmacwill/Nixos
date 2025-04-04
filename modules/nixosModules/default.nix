@@ -56,6 +56,7 @@
     vscode
     brave
     nemo-with-extensions # file manager with extensions
+    vscode-extensions.platformio.platformio-vscode-ide
   ];
 
   programs.neovim = {

@@ -18,6 +18,7 @@
   #more adds
   hyprlock.enable = true;
   hypridle.enable = true;
+  #wlogout.enable = true; # enable wlogout for hyprland exit menu
   #done
 
   wayland.windowManager.hyprland = {

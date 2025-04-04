@@ -40,10 +40,10 @@ with lib;
         ];
 
         "custom/logo" = {
-          return-type = "json";          
-          format = "{}";
-          exec = "current-generation";
-          interval = 60;
+         # return-type = "json";          
+          format = "  ";
+         # exec = "current-generation";
+         # interval = 60;
           tooltip = "true";
           on-click = "sleep 0.1 && wlogout";
 

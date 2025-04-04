@@ -63,7 +63,7 @@
       	background-position: center;
       	background-size: 25%;
       	border-style: solid;
-      	background-color: rgba(12, 12, 12, 0.3);
+      	background-color: rgba(12, 12, 12, 0.5);
       	border: 3px solid #${config.lib.stylix.colors.base05};
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
       }
@@ -77,32 +77,32 @@
       #logout {
       	margin: 10px;
       	border-radius: 20px;
-      	background-image: image(url("../../NixOS-core/modules/homeManagerModules/desktop/wlogout/logout.png"));
+      	background-image: image(url("../../Nixos/modules/homeManagerModules/wlogout/logout.png"));
       }
       #suspend {
       	margin: 10px;
       	border-radius: 20px;
-      	background-image: image(url("../../NixOS-core/modules/homeManagerModules/desktop/wlogout/suspend.png"));
+      	background-image: image(url("../../Nixos/modules/homeManagerModules/wlogout/suspend.png"));
       }
       #shutdown {
       	margin: 10px;
       	border-radius: 20px;
-      	background-image: image(url("../../NixOS-core/modules/homeManagerModules/desktop/wlogout/shutdown.png"));
+      	background-image: image(url("../../Nixos/modules/homeManagerModules/wlogout/shutdown.png"));
       }
       #reboot {
       	margin: 10px;
       	border-radius: 20px;
-      	background-image: image(url("../../NixOS-core/modules/homeManagerModules/desktop/wlogout/reboot.png"));
+      	background-image: image(url("../../Nixos/modules/homeManagerModules/wlogout/reboot.png"));
       }
       #lock {
       	margin: 10px;
       	border-radius: 20px;
-      	background-image: image(url("../../NixOS-core/modules/homeManagerModules/desktop/wlogout/lock.png"));
+      	background-image: image(url("../../Nixos/modules/homeManagerModules/wlogout/lock.png"));
       }
       #hibernate {
       	margin: 10px;
       	border-radius: 20px;
-      	background-image: image(url("../../NixOS-core/modules/homeManagerModules/desktop/wlogout/hibernate.png"));
+      	background-image: image(url("../../Nixos/modules/homeManagerModules/wlogout/hibernate.png"));
       }
     '';
   };
